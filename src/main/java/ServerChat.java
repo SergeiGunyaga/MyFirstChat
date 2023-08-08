@@ -16,13 +16,13 @@ public class ServerChat {
     }
 
     void sendAll(String message) {
-        for (Client client: listClients){
+        for (Client client : listClients) {
             client.receive(message);
         }
     }
 
     public void run() {
-        while(true) {
+        while (true) {
             System.out.println("Waiting...");
             // ждем клиента из сети
             try {
